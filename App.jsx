@@ -15,6 +15,7 @@ import TodoList from './src/screens/TodoList';
 import CardGrid from './src/screens/CardGrid';
 import DarkModeToggle from './src/screens/DarkModeToggle';
 import ParentChildDemo from './src/screens/ParentChildDemo';
+import CustomHookDemo from './src/screens/CustomHookDemo';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,7 @@ function HomeScreen({ navigation }) {
             <PrimaryButton buttonText="Responsive Card Grid" action={() => navigation.navigate("CardGrid")} />
             <PrimaryButton buttonText="Memoized Component" action={() => navigation.navigate("MemoizedComponent")} />
             <PrimaryButton buttonText="Dark Mode Toggle" action={() => navigation.navigate("DarkModeToggle")} />
+            <PrimaryButton buttonText="Custom Hook Demo" action={() => navigation.navigate("CustomHook")} />
             <PrimaryButton buttonText="Chat Box" action={() => navigation.navigate("ChatBox")} />
         </View>
     );
@@ -49,6 +51,7 @@ const App = () => {
                 <Stack.Screen name="CardGrid" component={CardGrid} options={{ title: "Responsive Card Grid" }} />
                 <Stack.Screen name="MemoizedComponent" component={ParentChildDemo} options={{ title: "Memoized Component" }} />
                 <Stack.Screen name="ChatBox" component={ChatBox} options={{ title: "Chat Box" }} />
+                <Stack.Screen name="CustomHook" component={CustomHookDemo} options={{ title: "Custom Hook Demo" }} />
                 <Stack.Screen name="DarkModeToggle" component={DarkModeToggle} options={{ title: "Dark Mode Toggle" }} />
 
             </Stack.Navigator>
